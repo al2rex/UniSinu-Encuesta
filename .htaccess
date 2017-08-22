@@ -1,0 +1,48 @@
+RewriteEngine On
+
+ErrorDocument 404 /error.php
+
+RewriteCond %{REQUEST_FILENAME} !-f
+RewriteCond %{SCRIPT_FILENAME} !-d
+
+#RUTAS VIEWS
+RewriteRule ^Bienestar/Login$ view/login.php
+RewriteRule ^Bienestar/Registrar$ view/registrar.php
+#VISTAS ADMINISTRADOR
+RewriteRule ^Bienestar/Dashboard-Administrador$ view/administrador/administrador.php
+RewriteRule ^Bienestar/Usuarios$ view/administrador/usuarios.php
+RewriteRule ^Bienestar/Crear-Preguntas$ view/administrador/preguntas/crear_preguntas.php
+RewriteRule ^Bienestar/ListarPreguntasJson$ view/administrador/preguntas/load.php
+RewriteRule ^Bienestar/ListarCategoriaJson$ view/administrador/preguntas/categoria.php
+RewriteRule ^Bienestar/InsertPreguntaJson$ view/administrador/preguntas/insert_preguntas.php
+
+#VISTAS ESTUDIANTE
+RewriteRule ^Bienestar/Dashboard-Estudiante$ view/estudiante/estudiante.php
+RewriteRule ^Bienestar/Encuesta-Estudiante$ view/estudiante/encuesta.php
+RewriteRule ^Bienestar/Responder-Estudiante/([0-9])$ view/estudiante/responder_encuesta.php?id_encuesta=$1
+RewriteRule ^Bienestar/Responder-Estudiante$ view/estudiante/responder_encuesta.php
+
+#IMAGENES
+RewriteRule ^Bienestar/Option$ public/img/option.png
+RewriteRule ^Bienestar/Options$ public/img/options.png
+
+
+
+#RUTA CONTROLADORES ADMINISTRADOR
+RewriteRule ^Bienestar/LoginIngresarController$ controller/loginController.php
+RewriteRule ^Bienestar/LoginSalirController$ controller/loginController.php
+RewriteRule ^Bienestar/registrarUsuariosController$ controller/usuarioController.php
+
+#RUTA CONTROLADORES ESTUDIANTE
+RewriteRule ^Bienestar/IngresarEstudianteController$ controller/estudianteController.php
+
+
+
+
+
+
+
+
+
+
+

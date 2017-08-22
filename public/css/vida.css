@@ -1,0 +1,36 @@
+/* General */
+body
+{
+	background: url("../img/fondo_unisinu.jpg");
+	background-repeat: no-repeat;
+	background-attachment: fixed;
+	font-family: "Hervetica", Arial; /*Resaltar las Letras */
+}
+header hgroup h1
+{
+	border-bottom:solid; /* Lineal del Titulo */
+	border-width:2px;
+	border-color:red; /* Color de la Linea del Titulo */
+}
+hgroup h1 a
+{
+	color: black;
+	text-decoration: none;
+}
+div button a
+{
+	color: white;
+	text-decoration: none;
+}
+
+/* INICIO */
+#contenido
+{
+	width: 960px;
+	margin: 0 auto;
+	text-align:center;
+}
+input
+{
+	width: 250px;
+}
