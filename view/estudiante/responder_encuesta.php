@@ -61,6 +61,20 @@ $list_preguntas = $preguntas->preguntasEstudiantes();
 								</select>
 							<?php
 							}
+							if($opcion_preg[$k]["id_tipo_opciones"]==6  && $opcion_preg[$k]["opcion"]=="TP"){ ?>
+								<select id="caja_de_texto">
+									<option value="0">Seleccione</option>
+									<option value="1">Cedula</option>
+								</select>
+							<?php
+							}
+							if($opcion_preg[$k]["id_tipo_opciones"]==6  && $opcion_preg[$k]["opcion"]=="REL"){ ?>
+								<select id="caja_de_texto">
+									<option value="0">Seleccione</option>
+									<option value="1">Cristiano</option>
+								</select>
+							<?php
+							}
 						}
 						?>
 						<hr />

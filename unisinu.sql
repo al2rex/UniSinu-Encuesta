@@ -3,7 +3,7 @@
 -- http://www.phpmyadmin.net
 --
 -- Servidor: 127.0.0.1
--- Tiempo de generación: 23-08-2017 a las 01:51:45
+-- Tiempo de generación: 23-08-2017 a las 02:41:25
 -- Versión del servidor: 10.1.19-MariaDB
 -- Versión de PHP: 7.0.13
 
@@ -93,7 +93,72 @@ INSERT INTO `opciones` (`id_opcion`, `id_pregunta`, `opcion`, `id_tipo_opciones`
 (8, 98, 'Departamento de nacimiento', 1),
 (9, 98, 'Municipio de nacimiento', 1),
 (10, 99, 'TP', 6),
-(11, 99, 'Numero de identificacion', 2);
+(11, 99, 'Numero de identificacion', 2),
+(12, 101, 'Propia', 4),
+(13, 101, 'Familiar', 4),
+(14, 101, 'Arrendada', 4),
+(15, 102, '1', 4),
+(16, 102, '2', 4),
+(17, 102, '3', 4),
+(18, 102, '4', 4),
+(19, 102, '5', 4),
+(20, 102, '6', 4),
+(21, 102, 'no estratificado', 4),
+(32, 103, 'mis padres', 4),
+(33, 103, 'En casa de un familiar', 4),
+(34, 103, 'Pensionado', 4),
+(35, 103, 'Amigos', 4),
+(36, 103, 'Mi pareja', 4),
+(37, 103, 'Solo', 4),
+(38, 104, '=>', 1),
+(39, 105, '1', 4),
+(40, 105, '2', 4),
+(41, 105, '3', 4),
+(42, 105, '4', 4),
+(43, 105, '5', 4),
+(44, 105, '6', 4),
+(45, 105, 'No estratificado', 4),
+(46, 106, '=>', 2),
+(47, 107, '=>', 2),
+(48, 108, '=>', 1),
+(49, 109, 'PROG', 6),
+(50, 109, 'Semestre', 2),
+(51, 109, 'Grupo', 2),
+(52, 109, 'ID(Codigo)', 2),
+(53, 110, 'Diurna', 4),
+(54, 110, 'Nocturna', 4),
+(55, 111, 'Soltero', 4),
+(56, 111, 'Casado', 4),
+(57, 111, 'Separado', 4),
+(58, 111, 'Viudo', 4),
+(59, 111, 'Union libre', 4),
+(60, 112, 'Si', 4),
+(61, 112, 'No', 4),
+(62, 112, 'Cuantos', 2),
+(63, 112, 'Edades', 1),
+(64, 113, 'REL', 6),
+(65, 114, 'Si', 4),
+(66, 114, 'No', 4),
+(67, 114, 'Cual', 1),
+(68, 115, 'Si', 4),
+(69, 115, 'No', 4),
+(70, 115, 'Cual', 1),
+(71, 116, 'Si', 4),
+(72, 116, 'No', 4),
+(73, 117, 'Indígenas', 4),
+(74, 117, 'Afro descendientes', 4),
+(75, 117, 'Raizales', 4),
+(76, 117, 'Gitanos', 4),
+(77, 117, 'Otra', 4),
+(78, 117, 'Cual', 1),
+(79, 118, 'Si', 4),
+(80, 118, 'No', 4),
+(81, 118, 'Fisica', 4),
+(82, 118, 'Cognitiva', 4),
+(83, 118, 'Auditiva', 4),
+(84, 118, 'Visual', 4),
+(85, 118, 'Otra', 4),
+(86, 118, 'Cual', 1);
 
 -- --------------------------------------------------------
 
@@ -122,7 +187,24 @@ INSERT INTO `preguntas` (`id_pregunta`, `id_categoria`, `id_usuario`, `pregunta`
 (98, 2, 1, 'LUGAR DE NACIMIENTO', 'no', '2017-08-22'),
 (99, 2, 1, 'TIPO DOCUMENTO', 'no', '2017-08-22'),
 (100, 2, 1, 'LUGAR DE PROCEDENCIA', 'no', '2017-08-22'),
-(101, 2, 1, 'TIPO DE VIVIENDA', 'no', '2017-08-22');
+(101, 2, 1, 'TIPO DE VIVIENDA', 'no', '2017-08-22'),
+(102, 2, 1, 'ESTRATO SOCIOECONOMICO FAMILIAR', 'no', '2017-08-22'),
+(103, 2, 1, 'ACTUALMENTE VIVO CON ', 'no', '2017-08-22'),
+(104, 2, 1, 'DIRECCION EN CARTAGENA', 'no', '2017-08-22'),
+(105, 2, 1, 'ESTRATO SOCIO-ECONOMICO', 'no', '2017-08-22'),
+(106, 2, 1, 'TELEFONO EN CARTAGENA', 'no', '2017-08-22'),
+(107, 2, 1, 'CELULAR', 'no', '2017-08-22'),
+(108, 2, 1, 'CORREO ELECTRONICO', 'no', '2017-08-22'),
+(109, 2, 1, 'MATRICULADO EN EL PROGRAMA DE:', 'no', '2017-08-22'),
+(110, 2, 1, 'JORNADA ACADEMICA', 'no', '2017-08-22'),
+(111, 2, 1, 'ESTADO CIVIL', 'no', '2017-08-22'),
+(112, 2, 1, 'TIENES HIJOS', 'no', '2017-08-22'),
+(113, 2, 1, 'RELIGION', 'no', '2017-08-22'),
+(114, 2, 1, 'PERTENECE A UN PARTIDO POLITICO', 'no', '2017-08-22'),
+(115, 2, 1, 'PERTENECE USTED A MINORíAS O COMUNIDADES VULNERABLES', 'no', '2017-08-22'),
+(116, 2, 1, 'ES UD VICTIMA DEL CONFLICTO ARMADO', 'no', '2017-08-22'),
+(117, 2, 1, 'PERTENECE ALGUNA DE LAS ETNIAS', 'no', '2017-08-22'),
+(118, 2, 1, 'TIENE ALGUN TIPO DE DISCAPACIDAD', 'no', '2017-08-22');
 
 -- --------------------------------------------------------
 
@@ -378,12 +460,12 @@ ALTER TABLE `encuesta`
 -- AUTO_INCREMENT de la tabla `opciones`
 --
 ALTER TABLE `opciones`
-  MODIFY `id_opcion` int(11) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=12;
+  MODIFY `id_opcion` int(11) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=87;
 --
 -- AUTO_INCREMENT de la tabla `preguntas`
 --
 ALTER TABLE `preguntas`
-  MODIFY `id_pregunta` int(11) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=102;
+  MODIFY `id_pregunta` int(11) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=119;
 --
 -- AUTO_INCREMENT de la tabla `respuestas_gene`
 --

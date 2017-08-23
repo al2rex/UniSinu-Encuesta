@@ -143,6 +143,7 @@ class Preguntas{
 		return $this->data;
 	}
 	public function opcionesPreguntasEstudiante($id_pregunta){
+		self::setNames();
 		$sql = " select * from opciones where id_pregunta = ?; ";
 		$stmt = $this->conexion->prepare($sql);
 		$stmt->execute( array($id_pregunta) );
