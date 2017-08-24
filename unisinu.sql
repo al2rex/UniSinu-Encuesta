@@ -3,7 +3,7 @@
 -- http://www.phpmyadmin.net
 --
 -- Servidor: 127.0.0.1
--- Tiempo de generación: 23-08-2017 a las 02:41:25
+-- Tiempo de generación: 24-08-2017 a las 20:12:41
 -- Versión del servidor: 10.1.19-MariaDB
 -- Versión de PHP: 7.0.13
 
@@ -75,7 +75,7 @@ INSERT INTO `encuesta` (`id_encuesta`, `nombre`, `estado`, `fecha_apertura`, `fe
 CREATE TABLE `opciones` (
   `id_opcion` int(11) NOT NULL,
   `id_pregunta` int(11) NOT NULL,
-  `opcion` varchar(45) NOT NULL,
+  `opcion` varchar(100) NOT NULL,
   `id_tipo_opciones` int(11) NOT NULL
 ) ENGINE=InnoDB DEFAULT CHARSET=utf8;
 
@@ -158,7 +158,31 @@ INSERT INTO `opciones` (`id_opcion`, `id_pregunta`, `opcion`, `id_tipo_opciones`
 (83, 118, 'Auditiva', 4),
 (84, 118, 'Visual', 4),
 (85, 118, 'Otra', 4),
-(86, 118, 'Cual', 1);
+(86, 118, 'Cual', 1),
+(87, 119, '=>', 1),
+(88, 120, '=>', 1),
+(89, 121, 'Analfabeta', 4),
+(90, 121, 'Basica primaria', 4),
+(91, 121, 'Bachiller', 4),
+(92, 121, 'Tecnico', 4),
+(93, 121, 'Profesional', 4),
+(94, 121, 'Especialista', 4),
+(95, 122, '=>', 2),
+(96, 123, '=>', 2),
+(97, 124, '=>', 1),
+(98, 125, '=>', 2),
+(99, 125, 'Lugar que ocupa entre ellos', 2),
+(100, 126, '=>', 2),
+(101, 127, '=>', 1),
+(102, 128, '=>', 1),
+(103, 129, '=>', 2),
+(118, 130, '1-2', 4),
+(119, 130, '2-4', 4),
+(120, 130, '4-5', 4),
+(121, 130, '5-6', 4),
+(122, 130, 'más de seis', 4),
+(123, 130, 'no sabe', 4),
+(124, 130, 'Un salario mínimo legal vigente SMMLV al año 2017 es: (no se XD) sin auxilio de transporte', 7);
 
 -- --------------------------------------------------------
 
@@ -204,7 +228,19 @@ INSERT INTO `preguntas` (`id_pregunta`, `id_categoria`, `id_usuario`, `pregunta`
 (115, 2, 1, 'PERTENECE USTED A MINORíAS O COMUNIDADES VULNERABLES', 'no', '2017-08-22'),
 (116, 2, 1, 'ES UD VICTIMA DEL CONFLICTO ARMADO', 'no', '2017-08-22'),
 (117, 2, 1, 'PERTENECE ALGUNA DE LAS ETNIAS', 'no', '2017-08-22'),
-(118, 2, 1, 'TIENE ALGUN TIPO DE DISCAPACIDAD', 'no', '2017-08-22');
+(118, 2, 1, 'TIENE ALGUN TIPO DE DISCAPACIDAD', 'no', '2017-08-22'),
+(119, 3, 1, 'NOMBRE DEL PADRE', 'no', '2017-08-23'),
+(120, 3, 1, 'OCUPACION', 'no', '2017-08-23'),
+(121, 3, 1, 'NIVEL DE ESTUDIO', 'no', '2017-08-23'),
+(122, 2, 1, 'CELULAR FAMILIAR', 'no', '2017-08-23'),
+(123, 3, 1, 'TELEFONO', 'no', '2017-08-23'),
+(124, 3, 1, 'E-MAIL', 'no', '2017-08-23'),
+(125, 3, 1, 'NUMERO DE HERMANOS', 'no', '2017-08-23'),
+(126, 3, 1, 'LUGAR QUE OCUPAS ENTRE ELLOS', 'no', '2017-08-23'),
+(127, 3, 1, 'EN CASO DE EMERGENCIA AVISAR A:', 'no', '2017-08-23'),
+(128, 3, 1, 'PARENTESCO', 'no', '2017-08-23'),
+(129, 3, 1, 'CELULAR AVISAR A:', 'no', '2017-08-23'),
+(130, 3, 1, 'INGRESOS FAMILIARES EN SMMLV', 'no', '2017-08-23');
 
 -- --------------------------------------------------------
 
@@ -272,7 +308,8 @@ INSERT INTO `tipo_opciones` (`id_tipo_opciones`, `nombre_tipo_opciones`) VALUES
 (3, 'checkbox'),
 (4, 'radiobutton'),
 (5, 'fecha'),
-(6, 'combobox');
+(6, 'combobox'),
+(7, 'informativo');
 
 -- --------------------------------------------------------
 
@@ -460,12 +497,12 @@ ALTER TABLE `encuesta`
 -- AUTO_INCREMENT de la tabla `opciones`
 --
 ALTER TABLE `opciones`
-  MODIFY `id_opcion` int(11) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=87;
+  MODIFY `id_opcion` int(11) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=125;
 --
 -- AUTO_INCREMENT de la tabla `preguntas`
 --
 ALTER TABLE `preguntas`
-  MODIFY `id_pregunta` int(11) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=119;
+  MODIFY `id_pregunta` int(11) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=131;
 --
 -- AUTO_INCREMENT de la tabla `respuestas_gene`
 --
@@ -485,7 +522,7 @@ ALTER TABLE `sub_ociones`
 -- AUTO_INCREMENT de la tabla `tipo_opciones`
 --
 ALTER TABLE `tipo_opciones`
-  MODIFY `id_tipo_opciones` int(11) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=7;
+  MODIFY `id_tipo_opciones` int(11) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=8;
 --
 -- AUTO_INCREMENT de la tabla `tipo_usuario`
 --
